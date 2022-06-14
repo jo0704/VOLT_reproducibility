@@ -1,6 +1,8 @@
 # VOLT_reproducibility
 This repository contains the scripts we used to reproduce the results in: Jingjing Xu, Hao Zhou, Chun Gan, Zaixiang Zheng, and Lei Li. 2021. Vocabulary learning via optimal transport for neural machine translation. In Proceedings of ACL 2021
 
+The preprocessing scripts with VOLT were adapted from the readme of the official VOLT repository and https://github.com/Jingjing-NLP/VOLT/blob/master/examples/fairseq_command/train_ende.sh for the training process
+
 ## Requirements
 
 git clone https://github.com/Jingjing-NLP/VOLT/
@@ -35,8 +37,10 @@ prepare files for training
 ## Training
 Training was executed with a GPU on Google Cloud using fairseq, in the following order:
 
-```train.sh```
+```train.sh```: uses one GPU 
 
-```checkpoints.sh```
+```checkpoints.sh```: averages the params of 5 model checkpoints
 
-```generate.sh```
+```generate.sh```: remove bpe splits
+
+```bash fairseq/scripts/compound_split_bleu.sh score.out```: computes BLEU score
