@@ -1,10 +1,10 @@
 #!/bin/bash
 
-
-output_path=$"X-EN/fr_en/bpe/volt/100000"/output
+#adapt data path
+output_path="X-EN/fr_en/bpe/volt/100000/output"
 mkdir $output_path
 
-#number gpu = 4
+#adapt data path
 data="X-EN/fr_en/bpe/volt/100000"
 max_token=9600
 max_epoch=100
