@@ -8,10 +8,9 @@ run_volt="${4:-1}" # set to true
 
 echo "Will run VOLT = $run_volt"
 
-data="X-EN/${src}_${tgt}/"
-# bpe_volt="$data/bpe/volt"
-bpe="X-EN/${src}_${tgt}/bpe"
-# mkdir -p "$bpe/$size"
+#adapt paths here
+data="/${src}_${tgt}/"
+bpe="/${src}_${tgt}/bpe"
 
 if [ ${run_volt} -eq "1" ]; then
     
