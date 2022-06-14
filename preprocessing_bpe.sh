@@ -8,9 +8,9 @@ run_volt="${4:-0}" # false by default
 
 echo "Will run VOLT = $run_volt"
 
-data="X-EN/${src}_${tgt}/"
-# bpe_volt="$data/bpe/volt"
-bpe="X-EN/${src}_${tgt}/bpe"
+#adapt paths here
+data="/${src}_${tgt}/"
+bpe="/${src}_${tgt}/bpe"
 
 # #subword-nmt style:
 mkdir -p "$bpe/$size"
